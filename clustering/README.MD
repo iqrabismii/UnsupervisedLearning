@@ -50,19 +50,19 @@ More details about profiler and data cleaning is available [here.](https://githu
 
 First, PCA was implemented to convert highly correlated variables into linear uncorrelated variables. Screeplot was used to see the variance explained by components.
 As the reduced data should explain 80% of the variance, 4 components was used. Then, different unsupervised methods were used to segment customers. 
-* Hierarchical clustering is a type of unsupervised machine learning technique used to group similar objects into clusters. There are two main types of hierarchical clustering:
+* __Hierarchical clustering__ is a type of unsupervised machine learning technique used to group similar objects into clusters. There are two main types of hierarchical clustering:
 1. Agglomerative Hierarchical Clustering: This type of clustering starts with each object being treated as its own cluster, and then iteratively merges the closest clusters into larger groups until all objects belong to a single cluster or a specified number of clusters have been formed.
 2. Divisive Hierarchical Clustering: This type of clustering starts with all objects in a single cluster, and then iteratively splits the cluster into smaller groups until each object belongs to its own cluster.
 
 Both types of hierarchical clustering can be visualized as a dendrogram, which shows the relationships between the clusters and the objects within them.
 
-* Model Based Clustering: It is a type of unsupervised machine learning technique that uses statistical models to group similar objects into clusters. Gaussian Mixture Model (GMM) is one such model-based clustering algorithm.
+* __Model Based Clustering__: It is a type of unsupervised machine learning technique that uses statistical models to group similar objects into clusters. Gaussian Mixture Model (GMM) is one such model-based clustering algorithm.
 
 In GMM, each cluster is represented by a Gaussian distribution, and the algorithm fits a Gaussian mixture model to the data by estimating the mean, covariance, and weight of each cluster. The algorithm uses an Expectation-Maximization (EM) algorithm to find the optimal parameters that maximize the likelihood of the data given the Gaussian mixture model.
 
 One advantage of GMM is that it can model clusters with different shapes and sizes, which makes it well-suited for data that has complex structures. Additionally, GMM can also model clusters that are overlapping or have different densities.
 
-* DBSCAN (Density-Based Spatial Clustering of Applications with Noise) is a density-based clustering algorithm that groups together points that are close to each other in the feature space and separates points that are far away from each other. It does this by defining a neighborhood around each data point, and grouping together points that are close enough to each other to be considered a cluster.
+* __DBSCAN__ (Density-Based Spatial Clustering of Applications with Noise) is a density-based clustering algorithm that groups together points that are close to each other in the feature space and separates points that are far away from each other. It does this by defining a neighborhood around each data point, and grouping together points that are close enough to each other to be considered a cluster.
 
 The two key parameters in DBSCAN are the radius (eps) and the minimum number of points (minPts) required to form a cluster. The radius defines the neighborhood around each data point, and the minimum number of points determines the minimum number of points that must be within the radius to form a cluster.
 
@@ -72,7 +72,7 @@ DBSCAN is often used in a variety of applications, including market segmentation
 
 In conclusion, DBSCAN is a density-based clustering algorithm that groups together points that are close to each other in the feature space and separates points that are far away from each other. With its ability to handle complex data structures and uncover hidden patterns, DBSCAN can provide valuable insights into the relationships between objects in the dataset.
 
-* KMeans Clustering: K-Means is a popular centroid-based clustering algorithm. It partitions a dataset into K clusters, where K is a user-defined number, by assigning each data point to the cluster with the nearest mean. The algorithm iteratively updates the cluster means and reassigns data points until convergence, producing K clusters that minimize the within-cluster sum of squared distances.
+* __KMeans Clustering__ : K-Means is a popular centroid-based clustering algorithm. It partitions a dataset into K clusters, where K is a user-defined number, by assigning each data point to the cluster with the nearest mean. The algorithm iteratively updates the cluster means and reassigns data points until convergence, producing K clusters that minimize the within-cluster sum of squared distances.
 
 
 Customers were segmented in two clusters using Agglomerative method. Ward(min variance) was used for Linkage.
